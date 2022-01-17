@@ -1,0 +1,12 @@
+HELP.md
+build/
+
+### project folder to ignore
+node_modules/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/

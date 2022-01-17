@@ -1,0 +1,31 @@
+<div class="row team-panel">
+  <div class="col-md-1" style="padding: 0px;">
+    <img class="logo" src="{{ team.logoUrl }}" alt="{{ team.name }}" />
+  </div>
+  <div class="col-md-11">
+    <h1>{{ team.fullName | uppercase }}</h1>
+    <p>{{ team.conference }}ern Conference</p>
+  </div>
+</div>
+
+<div class="row">
+  <table
+    class="table table-sm table-bordered"
+    mat-table
+    matSort
+    (matSortChange)="sortData($event)"
+  >
+    <tr class="header">
+      <th mat-sort-header="firstName">PLAYER</th>
+      <th mat-sort-header="position">POS</th>
+      <th mat-sort-header="heightInches">HT</th>
+      <th mat-sort-header="weightPounds">WT</th>
+    </tr>
+    <tr *ngFor="let player of sortedData">
+      <td>{{ player.firstName }} {{ player.lastName }}</td>
+      <td>{{ player.position }}</td>
+      <td>{{ player.heightInches }}</td>
+      <td>{{ player.weightPounds }}</td>
+    </tr>
+  </table>
+</div>

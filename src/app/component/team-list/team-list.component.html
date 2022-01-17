@@ -1,0 +1,24 @@
+<div class="top-panel">
+  <h1>TEAMS</h1>
+</div>
+
+<div class="row" >
+  <div class="col-sm-4 col-md-4 col-lg-4 card-padding" *ngFor="let team of teams">
+    <a routerLink="/teams/{{ team.id }}">
+      <mat-card>
+        <mat-card-content>
+          <img
+            class="header-image"
+            src="{{ team.logoUrl }}"
+            alt="{{ team.name }}"
+            class="float-left rounded-circle header-image"
+          />
+          <h5 class="card-title">{{ team.fullName }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ team.division }} | {{ team.city }}
+          </h6>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </div>
+</div>
