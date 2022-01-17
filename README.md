@@ -24,6 +24,6 @@ There are three Flask RESTful api endpoints available to you:
 
 - `GET` : `http://127.0.0.1:5002/teams` - Lists a high level detail of all the teams.
 - `GET` : `http://127.0.0.1:5002/teams/<team_id>` - Details of team of specific id
-- `GET` : `http://127.0.0.1:5002/players` - Lists a high level all the players in the league.
+- `GET` : `http://127.0.0.1:5002/players` - Lists all the players in the league.
 
  
